@@ -1,6 +1,6 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
@@ -8,8 +8,10 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          This react app version {window.env.REACT_APP_CLIENT_VERSION} had the
+          following injected at runtime:
         </p>
+        <p>{window.env.REACT_APP_HELLO_WORLD}</p>
         <a
           className="App-link"
           href="https://reactjs.org"
