@@ -24,3 +24,24 @@ The following steps were taken to get the project to this state.
    <script src="%PUBLIC_URL%/window.env.js"></script>
    ```
 8. `init-local` script added to npm scripts in `package.json` and called before the `start` to support local dev.
+9. `Dockerfile` created to use for non-local builds (based on `demery/docker-cra` image).
+
+## Building and running docker locally
+
+A local build of the docker image can be done with the following steps.
+
+```sh
+# Ensure packages are installed
+npm ci
+
+# Run a CRA build
+npm run build
+
+# Build the docker container
+docker build -t docker-cra-example .
+
+# Run the docker container
+docker run --env-file=.env -p 8080:80 docker-cra-example
+```
+
+After that your app should be available at [http://localhost:8080/](http://localhost:8080/)
