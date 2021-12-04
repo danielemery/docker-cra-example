@@ -18,12 +18,13 @@ The following steps were taken to get the project to this state.
 4. Joi schema created to validate custom environment variables (`env.schema.js`)
 5. Environment variable file created for local dev (`.env`)
 6. `.gitignore` file updated to exlude generated window environment variable (`public/window.env.js`)
-7. Index file updated to include `window.env.js` include script in the head
+8. Index file updated to include `window.env.js` include script in the head
    ```html
    <script src="%PUBLIC_URL%/window.env.js"></script>
    ```
 8. `init-local` script added to npm scripts in `package.json` and called before the `start` to support local dev.
 9. `Dockerfile` created to use for non-local builds (based on `demery/docker-cra` image).
+10. `.dockerignore` file created to avoid sending unecessary files as docker context.
 
 ## Building and running docker locally
 
