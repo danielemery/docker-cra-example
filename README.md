@@ -12,8 +12,7 @@ The following steps were taken to get the project to this state.
    ```
 2. `docker-cra` and `joi` packages installed (Note joi version needs to match the required peer dependency of docker-cra to ensure compatibility)
    ```sh
-   npm i -S joi
-   npm i -D docker-cra
+   npm i -S joi docker-cra
    ```
 3. Type definition created for environment variable types (`src/external_types/window.d.ts`)
 4. Joi schema created to validate custom environment variables (`env.schema.js`)
