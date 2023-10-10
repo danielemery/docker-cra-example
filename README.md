@@ -2,6 +2,10 @@
 
 Simple example of a [create-react-app](https://create-react-app.dev/) project being served using the [docker-cra](https://github.com/danielemery/docker-cra) tool.
 
+## Archived
+
+The project this was an example of has been archived in favour of [docker-react](https://github.com/danielemery/docker-react) which has the same core goal but aims to be more automatic and use vite instead of create-react-app.
+
 ## Process
 
 The following steps were taken to get the project to this state.
